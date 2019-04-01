@@ -1,0 +1,17 @@
+每页都显示5条数据
+知道那些值
+
+1.总条数
+2.显示多少页 ceil(总条数/每一页显示几页);
+
+//第一页
+select * from student limit 0,5;
+//第二页
+select * from student limit 5,10;
+//第三页
+select * from student limit 10,15;
+...
+
+得出规律：
+
+对应页的偏移量是 当前的页数 -1 * 每一页的显示数
